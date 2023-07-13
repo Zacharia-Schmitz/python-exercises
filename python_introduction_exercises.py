@@ -1,3 +1,3 @@
-print(Greeting)
-
 Greeting = 'Hello, World!'
+
+print(Greeting)
