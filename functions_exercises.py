@@ -1,9 +1,4 @@
-# %% [markdown]
-# ### 1. Define a function named is_two. It should accept one input and return True if the passed input is either the number or the string 2, False otherwise.
-# 
-
-# %%
-# Define a function called is_two that takes one parameter, x
+#1. Define a function named is_two. It should accept one input and return True if the passed input is either the number or the string 2, False otherwise.
 def is_two(x):
     """
     Returns True if the input is equal to the integer 2 or the string 'two', and False otherwise.
@@ -31,12 +26,7 @@ assert is_two('2') == True
 assert is_two(1) == False
 assert is_two('2.0') == False
 
-# %% [markdown]
-# ### 2. Define a function named is_vowel. It should return True if the passed string is a vowel, False otherwise.
-# 
-
-# %%
-# Define a function called is_vowel that takes one parameter, letter
+# 2. Define a function named is_vowel. It should return True if the passed string is a vowel, False otherwise.
 def is_vowel(letter):
     """
     Returns True if the input letter is a vowel (i.e., 'a', 'e', 'i', 'o', or 'u'), and False otherwise.
@@ -70,13 +60,7 @@ assert is_vowel('d') == False
 assert is_vowel('f') == False
 assert is_vowel('') == False
 
-
-# %% [markdown]
-# ### 3. Define a function named is_consonant. It should return True if the passed string is a consonant, False otherwise. Use your is_vowel function to accomplish this.
-# 
-
-# %%
-# Define a function called is_consonant that takes one parameter, x
+# 3. Define a function named is_consonant. It should return True if the passed string is a consonant, False otherwise. Use your is_vowel function to accomplish this.
 def is_consonant(x):
     """
     Returns True if the input x is a consonant (i.e., a non-vowel letter), and False otherwise.
@@ -100,9 +84,7 @@ def is_consonant(x):
         # If x is a vowel, it is not a consonant, return False
         return False
 
-
-
-# Test the is_consonant function with various inputs
+# Assertion Test
 assert is_vowel('E') == True
 assert is_vowel('A') == True
 assert is_vowel('a') == True
@@ -119,13 +101,7 @@ assert is_vowel('0') == False
 assert is_vowel('1') == False
 assert is_vowel('2') == False
 
-
-# %% [markdown]
-# ### 4. Define a function that accepts a string that is a word. The function should capitalize the first letter of the word if the word starts with a consonant.
-# 
-
-# %%
-# Define a function called capitalize_if_consonant that takes one parameter, firstletter
+# 4. Define a function that accepts a string that is a word. The function should capitalize the first letter of the word if the word starts with a consonant.
 def capitalize_if_consonant(firstletter):
     """
     Returns the input string with the first letter capitalized if it is a consonant, and the original string otherwise.
@@ -148,13 +124,7 @@ def capitalize_if_consonant(firstletter):
 assert capitalize_if_consonant('apple') == 'apple'
 assert capitalize_if_consonant('banana') == 'Banana'
 
-
-# %% [markdown]
-# ### 5. Define a function named calculate_tip. It should accept a tip percentage (a number between 0 and 1) and the bill total, and return the amount to tip.
-# 
-
-# %%
-# Define a function called calculate_tip that takes two parameters, x and y
+# 5. Define a function named calculate_tip. It should accept a tip percentage (a number between 0 and 1) and the bill total, and return the amount to tip.
 def calculate_tip(bill_total, tip_percent_decimal=0.2):
     """
     Calculates the tip amount based on the tip percentage and bill total.
@@ -179,12 +149,7 @@ assert calculate_tip(100, 0.3) == 30
 assert calculate_tip(100) == 20
 assert calculate_tip(100, 0.4) == 40
 
-# %% [markdown]
-# ### 6. Define a function named apply_discount. It should accept a original price, and a discount percentage, and return the price after the discount is applied.
-# 
-
-# %%
-# Define a function called apply_discount that takes two parameters, original_price and discount_percentage
+# 6. Define a function named apply_discount. It should accept a original price, and a discount percentage, and return the price after the discount is applied.
 def apply_discount(original_price, discount_percentage):
     """
     Calculates the price after a discount based on the input original price and discount percentage.
@@ -207,27 +172,7 @@ assert apply_discount(100, 50) == 50
 assert apply_discount(100, 15) == 85
 assert apply_discount(150, 50) == 75
 
-
-'''
-# TESTING FUNCTION:
-
-# Get the input for x and y
-original_price = float(input('Enter the original price (without $): '))
-discount_percentage = float(input('Enter the discount percentage (without %): '))
-
-# Pass the variable into the function
-returned = apply_discount(original_price, discount_percentage)
-
-# Print the return
-print(f'Discounted price: ${returned}')
-'''   
-
-
-# %% [markdown]
-# ### 7. Define a function named handle_commas. It should accept a string that is a number that contains commas in it as input, and return a number as output.
-# 
-
-# %%
+# 7. Define a function named handle_commas. It should accept a string that is a number that contains commas in it as input, and return a number as output.
 def handle_commas(numstring):
     """
     Removes any commas from the input number string and returns the result as a float.
@@ -245,26 +190,9 @@ def handle_commas(numstring):
     
 assert handle_commas('1,234') == 1234
 assert handle_commas('10,123') == 10123
-    
 
-# TESTING FUNCTION:
+# 8. Define a function named get_letter_grade. It should accept a number and return the letter grade associated with that number (A-F).
 
-# Get the input
-# user_input = input('Give me a number with commas: ')
-
-# Pass the variable into the function
-# returned = handle_commas(user_input)
-
-# Print the return
-# print(returned)
-
-
-# %% [markdown]
-# ### 8. Define a function named get_letter_grade. It should accept a number and return the letter grade associated with that number (A-F).
-# 
-
-# %%
-# Define a function called get_letter_grade that takes one parameter, score
 def get_letter_grade(score):
     """
     Returns the letter grade corresponding to the input score.
@@ -281,64 +209,35 @@ def get_letter_grade(score):
         return 'Please input a number from 1 - 100.'
     # Check if score is within the range for an A+
     elif score <= 100 and score >= 97:
-        # If score is an A+, return a message indicating so
         return(f'{score} is an A+.')
-    # Check if score is within the range for an A
     elif score <= 96 and score >= 93:
-        # If score is an A, return a message indicating so
         return(f'{score} is an A.')    
-    # Check if score is within the range for an A-
     elif score <= 92 and score >= 90:
-        # If score is an A-, return a message indicating so
         return(f'{score} is a A-.')
-    # Check if score is within the range for a B+
     elif score <= 89 and score >= 87:
-        # If score is a B+, return a message indicating so
         return(f'{score} is a B+.')
-    # Check if score is within the range for a B
     elif score <= 86 and score >= 83:
-        # If score is a B, return a message indicating so
         return(f'{score} is a B.')
-    # Check if score is within the range for a B-
     elif score <= 82 and score >= 80:
-        # If score is a B-, return a message indicating so
         return(f'{score} is a B-.')
-    # Check if score is within the range for a C+
     elif score <= 79 and score >= 77:
-        # If score is a C+, return a message indicating so
         return(f'{score} is a C+.')
-    # Check if score is within the range for a C
     elif score <= 76 and score >= 73:
-        # If score is a C, return a message indicating so
         return(f'{score} is a C.')
-    # Check if score is within the range for a C-
     elif score <= 72 and score >= 70:
-        # If score is a C-, return a message indicating so
         return(f'{score} is a C-.')
-    # Check if score is within the range for a D+
     elif score <= 69 and score >= 67:
-        # If score is a D+, return a message indicating so
         return(f'{score} is a D+.')
-    # Check if score is within the range for a D
     elif score <= 66 and score >= 65:
-        # If score is a D, return a message indicating so
         return(f'{score} is a D.')
-    # Check if score is less than 65
     elif score < 65:
-        # If score is an F, return a message indicating so
         return(f'{score} is an F.')
     
 assert get_letter_grade(65) == '65 is a D.'
 assert get_letter_grade(75) == '75 is a C.'
 assert get_letter_grade(100) == '100 is an A+.'
 
-
-# %% [markdown]
-# ### 9. Define a function named remove_vowels that accepts a string and returns a string with all the vowels removed.
-# 
-
-# %%
-# Define a function named remove_vowels that takes one parameter
+# 9. Define a function named remove_vowels that accepts a string and returns a string with all the vowels removed.
 def remove_vowels(string):
     """
     Removes all vowels (both upper and lowercase) from the input string and returns the modified string.
@@ -361,17 +260,12 @@ assert remove_vowels('Banana') == 'Bnn'
 assert remove_vowels('apple') == 'ppl'
 assert remove_vowels('Mississippi') == 'Msssspp'
 
-# %% [markdown]
-# ### 10. Define a function named normalize_name. It should accept a string and return a valid python identifier, that is:
-# - anything that is not a valid python identifier should be removed
-# - leading and trailing whitespace should be removed
-# - everything should be lowercase
-# - spaces should be replaced with underscores
-# - Examples: Name -> name, First Name -> first_name, % Completed -> completed
-# 
-
-# %%
-# Define a function named normalize_name that accepts one parameter.
+# 10. Define a function named normalize_name. It should accept a string and return a valid python identifier, that is:
+# anything that is not a valid python identifier should be removed
+# leading and trailing whitespace should be removed
+# everything should be lowercase
+# spaces should be replaced with underscores
+# Examples: Name -> name, First Name -> first_name, % Completed -> completed
 def normalize_name(string):
     """
     Normalizes the input string by removing non-alphanumeric characters, replacing spaces with underscores,
@@ -398,26 +292,9 @@ assert normalize_name('AAAaaa%4$$') == 'aaaaaa4'
 assert normalize_name('@@##$$123FFggGh') == '123ffgggh'
 assert normalize_name('% Completed') == 'completed'
 
-# Ask the user for input
-# user_input = input("Enter a string to normalize: ")
-
-# Normalize the user input
-# normalized_input = normalize_name(user_input)
-
-# Print the normalized input
-# print("Normalized input:", normalized_input)
-
-# %%
-normalize_name('% Completed')
-
-# %% [markdown]
-# ### 11. Write a function named cumulative_sum that accepts a list of numbers and returns a list that is the cumulative sum of the numbers in the list.
-# 
-# - cumulative_sum([1, 1, 1]) returns [1, 2, 3]
-# - cumulative_sum([1, 2, 3, 4]) returns [1, 3, 6, 10]
-
-# %%
-# Define a function cumulative_sum that accepts a list of numbers and returns a list that is the cumulative sum.
+# 11. Write a function named cumulative_sum that accepts a list of numbers and returns a list that is the cumulative sum of the numbers in the list.
+# cumulative_sum([1, 1, 1]) returns [1, 2, 3]
+# cumulative_sum([1, 2, 3, 4]) returns [1, 3, 6, 10]
 def cumulative_sum(numbers):
     """
     Returns a list that is the cumulative sum of the input list of numbers.
@@ -445,15 +322,9 @@ def cumulative_sum(numbers):
 assert cumulative_sum([1, 1, 1]) == [1, 2, 3]
 assert cumulative_sum([1, 2, 3, 4]) == [1, 3, 6, 10]
 
-# %% [markdown]
-# ### ADDITIONAL: Once you've completed the above exercises, follow the directions from https://gist.github.com/zgulde/ec8ed80ad8216905cda83d5645c60886 in order to thouroughly comment your code to explain your code.
-# 
+# ADDITIONAL: Once you've completed the above exercises, follow the directions from https://gist.github.com/zgulde/ec8ed80ad8216905cda83d5645c60886 in order to thouroughly comment your code to explain your code.
 
-# %% [markdown]
-# ### BONUS: Create a function named twelveto24. It should accept a string in the format 10:45am or 4:30pm and return a string that is the representation of the time in a 24-hour format. 
-# 
-
-# %%
+# BONUS: Create a function named twelveto24. It should accept a string in the format 10:45am or 4:30pm and return a string that is the representation of the time in a 24-hour format. 
 def twelveto24(time):
     """
     Converts a time string in 12-hour format to 24-hour format.
@@ -487,23 +358,11 @@ def twelveto24(time):
             if int(time) >=1200:
                 return str(time)
             
+assert twelveto24('9:00am') == '0900'
+assert twelveto24('10:00am') == '1000'
+assert twelveto24('3:00pm') == '1500'
 
-# Ask the user for input
-# user_input = input("Enter time a time to convert: (EX: 10:45am)" )
-
-# Normalize the user input
-# converted = twelveto24(userinput)
-
-# Print the converted time
-# print(f"Converted to 24 hour time: {converted}")
-
-
-# %% [markdown]
-# ### BONUS: write a function that does the opposite.
-# 
-
-# %%
-
+# BONUS: write a function that does the opposite.
 
 def twentyfourto12(miltime):
     milhours = str(miltime)[:2]
@@ -525,5 +384,31 @@ assert twentyfourto12(2300) == '11:00pm'
 assert twentyfourto12('0900') == '9:00am'
 assert twentyfourto12(1000) == '10:00am'
 
+### BONUS: Create a function named col_index. It should accept a spreadsheet column name, and return the index number of the column.
 
+def col_index(col_name):
+    """
+    Returns the index number of a spreadsheet column given its name.
 
+    Parameters:
+    col_name (str): The name of the column.
+
+    Returns:
+    int: The index number of the column.
+    """
+    col_num = 0
+    for i, c in enumerate(col_name[::-1]):
+        col_num += (ord(c) - 64) * (26 ** i)
+    return col_num - 1
+
+assert col_index("A") == 0
+assert col_index("B") == 1
+assert col_index("Z") == 25
+assert col_index("AA") == 26
+assert col_index("AB") == 27
+assert col_index("BA") == 52
+assert col_index("ZZ") == 701
+assert col_index("AAA") == 702
+assert col_index("AAB") == 703
+
+print('Ran successfully')
