@@ -1,1 +1,1 @@
-Python Exercises Repo
+# Repository for Python exercises accomplished during Codeup
